@@ -225,7 +225,7 @@ uint8_t ucTemp;
   {
     if (readReg(0x83) != 0x00) break;
     iTimeout++;
-    usleep(5000);
+    sleep_msec(5);
   }
   if (iTimeout == MAX_TIMEOUT)
   {
@@ -665,7 +665,7 @@ int iTimeout;
   while ((readReg(RESULT_INTERRUPT_STATUS) & 0x07) == 0)
   {
     iTimeout++;
-    usleep(5000);
+    sleep_msec(5);
     if (iTimeout > 100) { return 0; }
   }
 
@@ -753,7 +753,7 @@ uint16_t range;
   while ((readReg(RESULT_INTERRUPT_STATUS) & 0x07) == 0)
   {
     iTimeout++;
-    usleep(50000);
+    sleep_msec(50);
     if (iTimeout > 50)
     {
       return -1;
@@ -790,7 +790,7 @@ int iTimeout;
   while (readReg(SYSRANGE_START) & 0x01)
   {
     iTimeout++;
-    usleep(50000);
+    sleep_msec(50);
     if (iTimeout > 50)
     {
       return -1;
