@@ -46,7 +46,8 @@ extern uint32_t  tofReadDistance(void);
 //
 // Opens a file system handle to the I2C device
 // sets the device continous capture mode
-//
+// allows selection between the default mode (30-800mm) and the long range mode (30-2000mm).
+// default: bLongRange = 0;
 extern int tofInit(iic_index_t iic, uint8_t addr, int bLongRange);
 
 #endif // _TOFLIB_H
