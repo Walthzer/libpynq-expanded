@@ -10,10 +10,9 @@ Most come with a small example program.
  - vl53l0x: Adds driver for the VL53L0X TOF Distance sensor ([Adapted From here](https://github.com/bitbank2/VL53L0X))
 
 ## How to use:
-All additions are located in the `libary` folder of the Git Repo.
+All additions are located in the `libary` folder of the Git Repo.  
 
-
-**To quickly use an addition follow the quick procedure.**
+**To quickly use an addition follow the quick procedure.**  
  The library folder procedure is how you make the addition available to all programs in the `applications` folder, not just the one. (It saves a lot of copy pasting in the long run!)
  
  ### A: Quick And Easy:
