@@ -21,8 +21,8 @@
 // create a generic C library for Linux
 //
 
+#include <libpynq.h>
 #include <vl53l0x.h>
-#include <iic.h>
 
 #include <unistd.h>
 #include <stdio.h>
@@ -808,9 +808,6 @@ int i;
 
   sensor.iic_index = IIC0;
   sensor.baseAddr = 0x29;
-
-	if (sensor.iic_index == -1)
-		return 0;
 
 	if (model)
 	{

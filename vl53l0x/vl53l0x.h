@@ -1,6 +1,6 @@
 #include <stdbool.h>
 #include <stdint.h>
-#include <iic.h>
+#include <libpynq.h>
 
 #ifndef _TOFLIB_H_
 #define _TOFLIB_H_
