@@ -12,38 +12,31 @@
  * 
  */
 
+extern int vl53l0x_example_single();
+extern int vl53l0x_example_dual();
+
 int main(void) {
-  pynq_init();
+  	pynq_init();
 
-  // Setting up the buttons & LEDs
-  //Init the IIC pins
-  switchbox_set_pin(IO_AR_SCL, SWB_IIC0_SCL);
-  switchbox_set_pin(IO_AR_SDA, SWB_IIC0_SDA);
-  iic_init(IIC0);
+	//Setting up the buttons & LEDs
+	//Init the IIC pins
+	switchbox_set_pin(IO_AR_SCL, SWB_IIC0_SCL);
+	switchbox_set_pin(IO_AR_SDA, SWB_IIC0_SDA);
+	iic_init(IIC0);
 
-	int i;
-	uint32_t iDistance;
-	uint8_t model, revision;
+	//Test Scripts: Select ONE!
+	// - Single Sensor -> vl53l0x_example_single();
+	// - Dual Sensor -> vl53l0x_example_dual();
 
-	// For other boards (e.g. OrangePi) it's 0
-	i = tofInit(IIC0, 0x29, 0); // set long range mode (up to 2m)
-	if (i != 1)
-	{
-		return -1; // problem - quit
-	}
-	printf("VL53L0X device successfully opened.\n");
-	tofGetModel(&model, &revision);
-	printf("Model ID - %d\n", model);
-	printf("Revision ID - %d\n", revision);
-	fflush(NULL); //Get some output even is distance readings hang
-	for (i=0; i<1200; i++) // read values 20 times a second for 1 minute
-	{
-		iDistance = tofReadDistance();
-		printf("Distance = %dmm\n", iDistance);
-		sleep_msec(100); // 50ms
-	}
+	//Connect one sensor to the IIC bus and enjoy!
+	vl53l0x_example_single();
 
-  iic_destroy(IIC0);
-  pynq_destroy();
-  return EXIT_SUCCESS;
+	//Connect two sensors to the IIC bus
+	//ONLY POWER ONE AT FIRST
+	//Run the program and follow instructions!
+	//vl53l0x_example_dual();
+
+	iic_destroy(IIC0);
+	pynq_destroy();
+	return EXIT_SUCCESS;
 }
