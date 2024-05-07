@@ -32,7 +32,9 @@ int main(void) {
 	vl53l0x_example_single();
 
 	//Connect two sensors to the IIC bus
-	//ONLY POWER ONE AT FIRST
+	//ONLY CONNECT ONE TO 5V and GND
+	//--If the second sensor is connected to either 5v or GND
+	//--Before the first is initialized, they conflict.
 	//Run the program and follow instructions!
 	//vl53l0x_example_dual();
 
