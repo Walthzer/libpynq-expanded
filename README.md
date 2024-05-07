@@ -20,11 +20,11 @@ Every folder contains an independent addition, simple copy the `.c` and `.h` fil
 
 #### Example:
 
-![Clean Folder](https://raw.githubusercontent.com/Walthzer/libpynq-expanded/master/docs/images/clean-folder.PNG "Clean Folder")
+![Clean Folder](https://raw.githubusercontent.com/Walthzer/libpynq-expanded/master/assets/images/clean-folder.PNG "Clean Folder")
 
 After adding the VL53LOX files:
 
-![Added Folder](https://raw.githubusercontent.com/Walthzer/libpynq-expanded/master/docs/images/added-folder.PNG "Added Folder")
+![Added Folder](https://raw.githubusercontent.com/Walthzer/libpynq-expanded/master/assets/images/added-folder.PNG "Added Folder")
 
 ### B: Into Library Folder:
 Copy the `.c` and `.h` files in to the `library` folder in the libpynq and run `make install` as you would on when you first install libpynq. now you simply `#include <name-of-header.h>` as you would e.g `#include <libpynq.h>` to use the relevant addition.
