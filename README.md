@@ -16,7 +16,7 @@ All additions are located in the `libary` folder of the Git Repo.
  The library folder procedure is how you make the addition available to all programs in the `applications` folder, not just the one. (It saves a lot of copy pasting in the long run!)
  
  ### A: Quick And Easy:
-Every folder contains an independent addition, simple copy the `.c` and `.h` files for the needed additions besides your `main.c` into the directory your working in. e.g `applications/small-test/`on the PYNQ and add the related `#include <name-of-header.h>` for every `.h` file you added. 
+Every folder contains an independent addition, simple copy the `.c` and `.h` files for the needed additions besides your `main.c` into the directory your working in. e.g `applications/small-test/`on the PYNQ and add the related `#include "name-of-header.h>" for every `.h` file you added. 
 
 #### Example:
 
