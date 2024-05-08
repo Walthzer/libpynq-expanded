@@ -63,7 +63,8 @@ int vl53l0x_example_dual(void) {
 	//Setup Sensor B
 	printf("Initialising Sensor B:\n");
 
-	//Change the Address of the VL53L0X
+	//Use the base addr of 0x29 for sensor B
+	//It no longer conflicts with sensor A.
 	uint8_t addrB = 0x29;	
 	i = tofPing(IIC0, addrB);
 	printf("---Sensor Ping: ");
@@ -90,11 +91,11 @@ int vl53l0x_example_dual(void) {
 	printf("---Model ID - %d\n", model);
 	printf("---Revision ID - %d\n", revision);
 	printf("---Init: Succes\n");
-	fflush(NULL); //Get some output even is distance readings hang
+	fflush(NULL); //Get some output even if the distance readings hang
 	printf("\n");
 
 	uint32_t iDistance;
-	for (i=0; i<1200; i++) // read values 20 times a second for 1 minute
+	for (i=0; i<1200; i++)
 	{
 		iDistance = tofReadDistance(&sensorA);
 		printf("A => %dmm -- ", iDistance);
