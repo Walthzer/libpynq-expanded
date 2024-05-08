@@ -28,7 +28,7 @@ int vl53l0x_example_single(void) {
 	vl53x sensor;
 
 	//Initialize the sensor
-	i = tofInit(&sensor, IIC0, addr, 0); // set long range mode (up to 2m)
+	i = tofInit(&sensor, IIC0, addr, 0); // set default range mode (up to 800mm)
 	if (i != 0)
 	{
 		return -1; // problem - quit
