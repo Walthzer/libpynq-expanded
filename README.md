@@ -8,6 +8,7 @@ Most come with a small example program.
 ## Overview
 
  - vl53l0x: Adds driver for the VL53L0X TOF Distance sensor ([Adapted From here](https://github.com/bitbank2/VL53L0X))
+ - tcs3472: Adds driver for the TCS3472 Colour Sensor
  - PULSECOUNTER: Add an example usages for this existing library.
 
 ## How to use:
