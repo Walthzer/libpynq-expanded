@@ -12,6 +12,14 @@
 #include <libpynq.h>
 #define AS_SECONDS(time) (time / 1.0e8) //Timer runs at ~100MHZ
 
+/*******************************************************
+ * WARNING: This program will output nothing upon a button press
+ * IF YOU DO NOT HAVE THE 5EID0 `SD CARD IMAGE` RUNNING
+ * The pulsecounter is an FPGA module, simply changing your
+ * libpynq in not enough, you must update the SD CARD itself
+ * See: https://pynq.tue.nl/5EID0/getting-started/
+*******************************************************/
+
 int main()
 {
     pynq_init();
