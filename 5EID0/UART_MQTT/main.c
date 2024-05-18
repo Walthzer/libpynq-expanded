@@ -1,4 +1,3 @@
-```c
 #include <libpynq.h>
 #include <stdio.h>
 #include <fcntl.h>
@@ -85,5 +84,3 @@ int main()
     pynq_destroy();
     return EXIT_SUCCESS;
 }
-
-```
