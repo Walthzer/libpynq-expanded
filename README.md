@@ -8,6 +8,7 @@ Most come with a small example program.
 ## Overview
 
  - vl53l0x: Adds driver for the VL53L0X TOF Distance sensor ([Adapted From here](https://github.com/bitbank2/VL53L0X))
+ - tca9548a: Adds driver for the TCA9548a I2C multiplexer to resolve the address conflict between the TCS3472 AND VL53L0X
  - tcs3472: Adds driver for the TCS3472 Colour Sensor
  - PULSECOUNTER: Add an example usages for this existing library.
  - MQTT_UART: Demonstrates interactions between PYNQ and 5EID0 UART<>MQTT bridge.
